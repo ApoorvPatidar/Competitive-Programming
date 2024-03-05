@@ -803,16 +803,24 @@ int main(){
 }
 
 
-// 
-
+// Coins
 
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+int main()
+{
     int t;
     cin >> t;
 
-    while(t--){
-
+    while (t--)
+    {
+        int n, k;
+        cin >> n >> k;
+        if (!(n & 1))
+            yes;
+        else if (n & 1 && k & 1)
+            yes;
+        else
+            no;
     }
 }
