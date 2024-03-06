@@ -828,6 +828,7 @@ int main()
 
 // Walking Master
 
+
 #include<bits/stdc++.h>
 using namespace std; 
 int main() {
@@ -845,6 +846,7 @@ int main() {
 		}
 	}
 }
+
 
 // We Need the Zero
 
