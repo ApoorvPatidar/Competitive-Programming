@@ -303,17 +303,17 @@ int main()
     {
         string s1, s2;
         cin >> l1 >> l2 >> s1 >> s2;
-        int a = -1;
+        int arr = -1;
         for (int i = 0; i <= 5; i++)
         {
             if (s1.find(s2) != -1)
             {
-                a = i;
+                arr = i;
                 break;
             }
             s1 += s1;
         }
-        cout << a << endl;
+        cout << arr << endl;
     }
 }
 
@@ -470,19 +470,19 @@ int32_t main()
     {
         int n;
         cin >> n;
-        vector<int> a;
+        vector<int> arr;
         for (int i = 0; i < n; ++i)
         {
             int x;
             cin >> x;
-            if (i && a.back() > x)
+            if (i && arr.back() > x)
             {
-                a.push_back(1);
+                arr.push_back(1);
             }
-            a.push_back(x);
+            arr.push_back(x);
         }
-        cout << a.size() << "\n";
-        for (int el : a)
+        cout << arr.size() << "\n";
+        for (int el : arr)
             cout << el << " ";
         cout << "\n";
     }
@@ -543,17 +543,17 @@ int main(){
     cin >> t;
 
     while(t--){
-        int a,b,c;
-        cin >> a >> b >> c;
+        int arr,b,c;
+        cin >> arr >> b >> c;
 
         if( c % 2 == 0){         //* if(c & 1)    checks if c is odd if the rightmost bit is 1(when converted to decimal) then the number is odd
-            if(a>b){
+            if(arr>b){
                 cout<<"First"<<endl;
             }else{
             cout<<"Second"<<endl;
             }
         }else{
-            if(a<b){
+            if(arr<b){
                 cout<<"Second"<<endl;
             }else{
                 cout<<"First"<<endl;
@@ -681,7 +681,7 @@ int main()
 }
 
 
-// Grasshopper on a Line
+// Grasshopper on arr Line
 
 
 #include <bits/stdc++.h>
@@ -818,11 +818,11 @@ int main()
         int n, k;
         cin >> n >> k;
         if (!(n & 1))
-            yes;
+            cout<<"yes"<<endl;
         else if (n & 1 && k & 1)
-            yes;
+            cout<<"yes"<<endl;
         else
-            no;
+            cout<<"no"<<endl;
     }
 }
 
@@ -830,35 +830,61 @@ int main()
 // Walking Master
 
 
-#include<bits/stdc++.h>
-using namespace std; 
-int main() {
-	cin.tie(0),cout.tie(0);
-	int t;
-	cin>>t;
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin >> t;
 
-	while(t--) {
-		int a,b,c,d;
-		cin>>a>>b>>c>>d;
-		if(b<=d&&c<=a+d-b) {
-			cout<<(d-b)+(a+d-b-c)<<"\n";
-		} else {
-			cout<<"-1\n";
-		}
-	}
+    while (t--)
+    {
+        int arr, b, c, d;
+        cin >> arr >> b >> c >> d;
+        if (b <= d && c <= arr + d - b)
+        {
+            cout << (d - b) + (arr + d - b - c) << "\n";
+        }
+        else
+        {
+            cout << "-1\n";
+        }
+    }
 }
-
 
 // We Need the Zero
 
 
 #include <bits/stdc++.h>
 using namespace std;
-int main(){
+
+int main() {
     int t;
     cin >> t;
 
-    while(t--){
-        
+    while (t--) {
+        int n;
+        cin >> n;
+
+        vector<int> arr(n);
+        for (int i = 0; i < n; ++i) {
+            cin >> arr[i];
+        }
+
+        int result = 0;
+        for (int x : arr) {
+            result ^= x;
+        }
+
+        if (result == 0) {
+            cout << 0 << endl;
+        } else {
+            if (n % 2 == 1) {
+                cout << result << endl;
+            } else {
+                cout << -1 << endl;
+            }
+        }
     }
+    return 0;
 }
