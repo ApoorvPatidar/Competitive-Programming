@@ -888,3 +888,46 @@ int main() {
     }
     return 0;
 }
+
+
+// Prepend and Append
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+
+    while(t--){
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+        int left = 0;
+        int right = n-1;
+        int final = n;
+
+        while(s[left] != s[right] && final > 0){
+            left++;
+            right--;
+            final -= 2;
+        }
+        cout<<final<<endl;
+    }
+}
+
+
+// Serval and Mocha's Array
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+
+    while(t--){
+        
+    }
+}
