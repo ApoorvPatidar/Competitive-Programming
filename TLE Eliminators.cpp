@@ -955,6 +955,42 @@ int main()
 // One and Two
 
 
+#include<iostream>
+#define LL long long
+using namespace std;
+int t,n,A[1005];
+int main(){
+	ios::sync_with_stdio(false);
+	cin>>t;
+	while(t--){
+		cin>>n;
+		int total=0,cnt=0;
+		for(int i=1;i<=n;i++){
+			cin>>A[i];
+			if(A[i]%2==0)total++;
+		}
+		if(total==0)cout<<"1\n";
+		else if(total%2)cout<<"-1\n";
+		else{
+			cnt=total/2;
+			for(int i=1;i<=n;i++){
+				if(A[i]%2==0){
+					cnt--;
+					if(cnt==0){
+						cout<<i<<"\n";
+						break;
+	    			}	
+				}				
+			}
+		}		
+	}
+	return 0;
+}
+
+
+// 
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
