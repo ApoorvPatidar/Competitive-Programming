@@ -1023,7 +1023,7 @@ int main() {
 }
 
 
-// 
+// Everybody Likes Good Arrays!
 
 
 #include <bits/stdc++.h>
@@ -1033,6 +1033,78 @@ int main(){
     cin >> t;
 
     while(t--){
+        int n;
+        cin >> n;
+        int arr[n];
+
+        for(int i = 0; i<n; i++){
+            cin>>arr[i];
+        }
         
+        int count = 0;
+
+        for(int i = 0; i<n-1; i++){
+
+            count += (!((arr[i]^arr[i+1])&1));
+            /*XOR the two numbers and check 0th bit in the resultant, if it is 1
+            then, numbers are of different parity, otherwise both are of same parity*/
+
+        }
+        cout<<count<<endl;
+    }
+    return 0;
+}
+
+
+// Extremely Round
+
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+#define endl "\n"
+#define int long long
+ 
+ 
+void solve() {
+	
+    int t;
+    cin>>t;
+
+    while(t--){
+        int n;
+        cin >> n;
+    
+        if(n <= 10){
+            cout << n << endl;
+            return;
+        }
+    
+        int cnt = 0;
+        int t = 0;
+    
+        while(n/10 > 0){
+            n = n/10;
+            cnt++;
+            t = n*10;
+        }
+    
+        cout << (9 * cnt + t/10) << endl;
+    }
+ 
+}
+
+
+// Two Permutations
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t;
+    cin >> t;
+
+    while(t--){
+
     }
 }
